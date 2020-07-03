@@ -1,27 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>meetup on SRE Paris</title>
-    <link>https://sre-paris.github.io/tags/meetup/</link>
-    <description>Recent content in meetup on SRE Paris</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 06 Jun 2018 19:00:00 -0100</lastBuildDate>
-    
-	<atom:link href="https://sre-paris.github.io/tags/meetup/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>#1 Site Reliability Engineering, It&#39;s here !</title>
-      <link>https://sre-paris.github.io/post/2018-06-06-first-meetup/</link>
-      <pubDate>Wed, 06 Jun 2018 19:00:00 -0100</pubDate>
-      
-      <guid>https://sre-paris.github.io/post/2018-06-06-first-meetup/</guid>
-      <description>Bonjour à tous,
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>meetup on SRE Paris</title><link>https://sre-paris.github.io/tags/meetup/</link><description>Recent content in meetup on SRE Paris</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 06 Jun 2018 19:00:00 -0100</lastBuildDate><atom:link href="https://sre-paris.github.io/tags/meetup/index.xml" rel="self" type="application/rss+xml"/><item><title>#1 Site Reliability Engineering, It's here !</title><link>https://sre-paris.github.io/post/2018-06-06-first-meetup/</link><pubDate>Wed, 06 Jun 2018 19:00:00 -0100</pubDate><guid>https://sre-paris.github.io/post/2018-06-06-first-meetup/</guid><description>Bonjour à tous,
 Nous sommes ravis de vous inviter au MeetUp Site Reliability Engineering !
 Pour ce premier Meetup SRE à Paris nous serons hébergés dans les locaux de PeopleDoc, ce sera l’occasion de faire connaissance et discuter du vaste sujet de SRE et des enjeux techniques pour nos environnements respectifs.
-Details and photos here https://www.meetup.com/Site-Reliability-Engineering-Paris/events/251066328/</description>
-    </item>
-    
-  </channel>
-</rss>
+Details and photos here https://www.meetup.com/Site-Reliability-Engineering-Paris/events/251066328/</description></item></channel></rss>
