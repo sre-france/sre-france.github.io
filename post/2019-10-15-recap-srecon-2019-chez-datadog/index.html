@@ -1,19 +1,485 @@
-<!doctype html><html lang=en itemscope itemtype=http://schema.org/WebPage><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><title>#5 Site Reliability Engineering - Recap SRECon'19 chez Datadog - SRE France</title><meta name=description content="Bonjour à tous,
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>#5 Site Reliability Engineering - Recap SRECon&#39;19 chez Datadog - SRE France</title>
+  <meta name="description" content="Bonjour à tous,
 Nous sommes ravis de vous inviter au 5ème meetup Site Reliability Engineering Paris ! Celui-ci aura comme thématique la SRECon 2019 EMEA comme l&rsquo;année dernière avec un résumé de cette event ainsi que des présentations par des speakers de la scène Parisienne.
-A cette occasion, nous serons gentiment hébergés dans les tous nouveaux locaux de Datadog (9ème). Merci Alvin et Léo pour l&rsquo;invitation."><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"SRE France","url":"https:\/\/sre-france.github.io\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/sre-france.github.io\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/sre-france.github.io\/","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/sre-france.github.io\/post\/2019-10-15-recap-srecon-2019-chez-datadog\/","name":"#5 site reliability engineering recap s r e con\u002719 chez datadog"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":""},"headline":"#5 Site Reliability Engineering - Recap SRECon\u002719 chez Datadog","description":"Bonjour à tous,\nNous sommes ravis de vous inviter au 5ème meetup Site Reliability Engineering Paris ! Celui-ci aura comme thématique la SRECon 2019 EMEA comme l\u0026rsquo;année dernière avec un résumé de cette event ainsi que des présentations par des speakers de la scène Parisienne.\nA cette occasion, nous serons gentiment hébergés dans les tous nouveaux locaux de Datadog (9ème). Merci Alvin et Léo pour l\u0026rsquo;invitation.\n","inLanguage":"en","wordCount":263,"datePublished":"2019-10-15T19:00:00","dateModified":"2019-10-15T19:00:00","image":"https:\/\/sre-france.github.io\/","keywords":["meetup"],"mainEntityOfPage":"https:\/\/sre-france.github.io\/post\/2019-10-15-recap-srecon-2019-chez-datadog\/","publisher":{"@type":"Organization","name":"https:\/\/sre-france.github.io\/","logo":{"@type":"ImageObject","url":"https:\/\/sre-france.github.io\/","height":60,"width":60}}}</script><meta property="og:title" content="#5 Site Reliability Engineering - Recap SRECon'19 chez Datadog"><meta property="og:description" content="Bonjour à tous,
+A cette occasion, nous serons gentiment hébergés dans les tous nouveaux locaux de Datadog (9ème). Merci Alvin et Léo pour l&rsquo;invitation."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "SRE France",
+    
+    "url": "https:\/\/sre-france.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/sre-france.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/sre-france.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/sre-france.github.io\/post\/2019-10-15-recap-srecon-2019-chez-datadog\/",
+          "name": "#5 site reliability engineering recap s r e con\u002719 chez datadog"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "#5 Site Reliability Engineering - Recap SRECon\u002719 chez Datadog",
+  "description" : "Bonjour à tous,\nNous sommes ravis de vous inviter au 5ème meetup Site Reliability Engineering Paris ! Celui-ci aura comme thématique la SRECon 2019 EMEA comme l\u0026rsquo;année dernière avec un résumé de cette event ainsi que des présentations par des speakers de la scène Parisienne.\nA cette occasion, nous serons gentiment hébergés dans les tous nouveaux locaux de Datadog (9ème). Merci Alvin et Léo pour l\u0026rsquo;invitation.\n",
+  "inLanguage" : "en",
+  "wordCount":  263 ,
+  "datePublished" : "2019-10-15T19:00:00",
+  "dateModified" : "2019-10-15T19:00:00",
+  "image" : "https:\/\/sre-france.github.io\/",
+  "keywords" : [ "meetup" ],
+  "mainEntityOfPage" : "https:\/\/sre-france.github.io\/post\/2019-10-15-recap-srecon-2019-chez-datadog\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/sre-france.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/sre-france.github.io\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="#5 Site Reliability Engineering - Recap SRECon&#39;19 chez Datadog" />
+<meta property="og:description" content="Bonjour à tous,
 Nous sommes ravis de vous inviter au 5ème meetup Site Reliability Engineering Paris ! Celui-ci aura comme thématique la SRECon 2019 EMEA comme l&rsquo;année dernière avec un résumé de cette event ainsi que des présentations par des speakers de la scène Parisienne.
-A cette occasion, nous serons gentiment hébergés dans les tous nouveaux locaux de Datadog (9ème). Merci Alvin et Léo pour l&rsquo;invitation."><meta property="og:image" content="https://sre-france.github.io/img/meetup/05.jpg"><meta property="og:url" content="https://sre-france.github.io/post/2019-10-15-recap-srecon-2019-chez-datadog/"><meta property="og:type" content="website"><meta property="og:site_name" content="SRE France"><meta name=twitter:title content="#5 Site Reliability Engineering - Recap SRECon'19 chez Datadog"><meta name=twitter:description content="Bonjour à tous,
-Nous sommes ravis de vous inviter au 5ème meetup Site Reliability Engineering Paris ! Celui-ci aura comme thématique la SRECon 2019 EMEA comme l&rsquo;année dernière avec un résumé de …"><meta name=twitter:image content="https://sre-france.github.io/img/meetup/05.jpg"><meta name=twitter:card content="summary"><link href=https://sre-france.github.io/img/favicon.ico rel=icon type=image/x-icon><meta name=generator content="Hugo 0.71.1"><link rel=alternate href=https://sre-france.github.io/index.xml type=application/rss+xml title="SRE France"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css integrity=sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y crossorigin=anonymous><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.5.0/css/all.css integrity=sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU crossorigin=anonymous><link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous><link rel=stylesheet href=https://sre-france.github.io/css/main.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"><link rel=stylesheet href=https://sre-france.github.io/css/highlight.min.css><link rel=stylesheet href=https://sre-france.github.io/css/codeblock.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css integrity=sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css integrity=sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R crossorigin=anonymous><style>.intro-header.big-img{background-color:#000}</style></head><body><nav class="navbar navbar-default navbar-fixed-top navbar-custom"><div class=container-fluid><div class=navbar-header><button type=button class=navbar-toggle data-toggle=collapse data-target=#main-navbar>
-<span class=sr-only>Toggle navigation</span>
-<span class=icon-bar></span><span class=icon-bar></span><span class=icon-bar></span></button>
-<a class=navbar-brand href=https://sre-france.github.io/>SRE France</a></div><div class="collapse navbar-collapse" id=main-navbar><ul class="nav navbar-nav navbar-right"><li><a title=Meetups href=/tags/meetup/>Meetups</a></li><li><a title=Github href=https://github.com/sre-france/>Github</a></li><li><a title="Job Board" href=/page/job-board/>Job Board</a></li><li><a title=Contact href=/page/contact/>Contact</a></li><li><a title=About href=/page/about/>About</a></li></ul></div></div></nav><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-<button class="pswp__button pswp__button--share" title=Share></button>
-<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><div id=header-big-imgs data-num-img=1 data-img-src-1=/img/meetup/05.webp data-img-desc-1="Meetup #5 at Datadog"></div><header class="header-section has-img"><div class="intro-header big-img"><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=post-heading><h1>#5 Site Reliability Engineering - Recap SRECon'19 chez Datadog</h1><span class=post-meta><i class="fas fa-calendar"></i>&nbsp;Posted on October 15, 2019
-&nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
-&nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;263&nbsp;words</span></div></div></div></div><span class=img-desc style=display:inline></span></div><div class="intro-header no-img"><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=post-heading><h1>#5 Site Reliability Engineering - Recap SRECon'19 chez Datadog</h1><span class=post-meta><i class="fas fa-calendar"></i>&nbsp;Posted on October 15, 2019
-&nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
-&nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;263&nbsp;words</span></div></div></div></div></div></header><div class=container role=main><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><article role=main class=blog-post><p>Bonjour à tous,</p><p>Nous sommes ravis de vous inviter au 5ème meetup Site Reliability Engineering Paris ! Celui-ci aura comme thématique la <a href=https://www.usenix.org/conference/srecon19emea>SRECon 2019 EMEA</a> comme l&rsquo;année dernière avec un résumé de cette event ainsi que des présentations par des speakers de la scène Parisienne.</p><p>A cette occasion, nous serons gentiment hébergés dans les tous nouveaux locaux de Datadog (9ème). Merci Alvin et Léo pour l&rsquo;invitation.</p><h3 id=programme>Programme</h3><p>Voici le programme de la soirée :</p><ul><li><strong>19h00-19h15 :</strong> Accueil des participants</li><li><strong>19h15-19h25 :</strong> Présentation du programme</li><li><strong>19h25-19h45 :</strong> Debugging with network - Anthonin Bonnefoy</li><li><strong>19h45-20h00 :</strong> SRECon19 recap and highlights - Pablo Seminario</li><li><strong>20h00-20h15 :</strong> Quizz SRE</li><li><strong>20h15-21h30 :</strong> Apéro sponsorisé par Datadog</li></ul><p>Si quelqu&rsquo;un est motivé pour un lightning talk (~5/10 minutes) il y a toujours des créneaux disponibles, donc n&rsquo;hésitez pas à proposer le votre, les talks sont ouverts à tout type de niveaux et de thématiques SRE: principes, on-call, monitoring, best practices, incident management, post-mortem, outils, retours d&rsquo;expérience, etc.</p><p>A mardi !</p><h3 id=détail-des-présentations>Détail des présentations</h3><h4 id=debugging-with-network>Debugging with network</h4><p><strong>Speaker:</strong> Anthonin Bonnefoy, SRE @ Datadog</p><p><strong>Description:</strong> During incidents, you might be brought to debug applications and systems you have no knowledge about. The network can provide invaluable information and insight into those. I will share my experience with the tools and methods I&rsquo;ve used to find and solve issues inside our AWS infrastructure.</p><h4 id=srecon19-recap-and-highlights>SRECon19 recap and highlights</h4><p><strong>Speaker:</strong> Pablo Seminario, SRE @ PeopleDoc</p><p><strong>Description:</strong> An introduction to the SRECon event and a recap of its latest edition in Dublin, including a highlight of my preferred talks.</p><h3 id=links>Links</h3><ul><li>Détails de l&rsquo;event sur <a href=https://www.meetup.com/Site-Reliability-Engineering-Paris/events/265371024/>Meetup.com</a></li><li><a href=https://www.meetup.com/Site-Reliability-Engineering-Paris/photos/30443587/>Photos</a></li></ul><div class=blog-tags><a href=https://sre-france.github.io//tags/meetup/>meetup</a>&nbsp;</div><h4 class=see-also>See also</h4><ul><li><a href=/post/2021-10-07-rex-edition/>#11 Site Reliability Engineering - REX edition</a></li><li><a href=/post/2021-07-26-summer-meetup/>#10 Site Reliability Engineering - Summer meetup 🌞😎🏖️</a></li><li><a href=/post/2021-04-08-monitoring-tools/>#9 Site Reliability Engineering - Monitoring tools 📈</a></li><li><a href=/post/2021-01-19-1st-meetup-2021/>#8 Site Reliability Engineering - 1st meetup of 2021 🎉</a></li><li><a href=/post/2020-09-30-news-and-infrastructure-as-code/>#7 Site Reliability Engineering - News and Infrastructure as code</a></li></ul></article><ul class="pager blog-pager"><li class=previous><a href=https://sre-france.github.io/post/2019-09-18-meetup-de-la-rentree/ data-toggle=tooltip data-placement=top title="#4 Site Reliability Engineering - Meetup de la rentrée">&larr; Previous Post</a></li><li class=next><a href=https://sre-france.github.io/post/2020-02-05-1st-meet-in-2020/ data-toggle=tooltip data-placement=top title="#6 Site Reliability Engineering - 1st meet in 2020">Next Post &rarr;</a></li></ul></div></div></div><footer><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center footer-links"><li><a href=https://github.com/sre-france title=GitHub><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-github fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://telegram.me/joinchat/UtlUno6ukr0r6v6I title=Telegram><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-telegram fa-stack-1x fa-inverse"></i></span></a></li><li><a href title=RSS><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i><i class="fas fa-rss fa-stack-1x fa-inverse"></i></span></a></li></ul><p class="credits copyright text-muted"><a href=https://sre-france.github.io/>SRE France</a>
-&nbsp;&copy;
-2021</p><p class="credits theme-by text-muted"><a href=https://gohugo.io>Hugo v0.71.1</a> powered &nbsp;&bull;&nbsp; Theme <a href=https://github.com/halogenica/beautifulhugo>Beautiful Hugo</a> adapted from <a href=https://deanattali.com/beautiful-jekyll/>Beautiful Jekyll</a></p></div></div></div></footer><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js integrity=sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js integrity=sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe crossorigin=anonymous></script><script src=https://code.jquery.com/jquery-1.12.4.min.js integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin=anonymous></script><script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa crossorigin=anonymous></script><script src=https://sre-france.github.io/js/main.js></script><script src=https://sre-france.github.io/js/highlight.min.js></script><script>hljs.initHighlightingOnLoad();</script><script>$(document).ready(function(){$("pre.chroma").css("padding","0");});</script><script>renderMathInElement(document.body);</script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js integrity=sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js integrity=sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q crossorigin=anonymous></script><script src=https://sre-france.github.io/js/load-photoswipe.js></script></body></html>
+A cette occasion, nous serons gentiment hébergés dans les tous nouveaux locaux de Datadog (9ème). Merci Alvin et Léo pour l&rsquo;invitation.">
+<meta property="og:image" content="https://sre-france.github.io/img/meetup/05.jpg" />
+<meta property="og:url" content="https://sre-france.github.io/post/2019-10-15-recap-srecon-2019-chez-datadog/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="SRE France" />
+
+  <meta name="twitter:title" content="#5 Site Reliability Engineering - Recap SRECon&#39;19 chez Datadog" />
+  <meta name="twitter:description" content="Bonjour à tous,
+Nous sommes ravis de vous inviter au 5ème meetup Site Reliability Engineering Paris ! Celui-ci aura comme thématique la SRECon 2019 EMEA comme l&rsquo;année dernière avec un résumé de …">
+  <meta name="twitter:image" content="https://sre-france.github.io/img/meetup/05.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://sre-france.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.71.1" />
+  <link rel="alternate" href="https://sre-france.github.io/index.xml" type="application/rss+xml" title="SRE France"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://sre-france.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://sre-france.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://sre-france.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+<style>
+  .intro-header.big-img {
+      background-color: black;
+  }
+</style>
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://sre-france.github.io/">SRE France</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Meetups" href="/tags/meetup/">Meetups</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Github" href="https://github.com/sre-france/">Github</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Job Board" href="/page/job-board/">Job Board</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Contact" href="/page/contact/">Contact</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+    <div id="header-big-imgs" data-num-img=1 
+      
+         
+          data-img-src-1="/img/meetup/05.webp" 
+         
+         data-img-desc-1="Meetup #5 at Datadog"
+      ></div>
+  
+
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-heading">
+                <h1>#5 Site Reliability Engineering - Recap SRECon&#39;19 chez Datadog</h1>
+                  
+                  
+                    <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on October 15, 2019
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;263&nbsp;words
+  
+  
+  
+</span>
+
+
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>#5 Site Reliability Engineering - Recap SRECon&#39;19 chez Datadog</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on October 15, 2019
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;263&nbsp;words
+  
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Bonjour à tous,</p>
+<p>Nous sommes ravis de vous inviter au 5ème meetup Site Reliability Engineering Paris ! Celui-ci aura comme thématique la <a href="https://www.usenix.org/conference/srecon19emea">SRECon 2019 EMEA</a> comme l&rsquo;année dernière avec un résumé de cette event ainsi que des présentations par des speakers de la scène Parisienne.</p>
+<p>A cette occasion, nous serons gentiment hébergés dans les tous nouveaux locaux de Datadog (9ème). Merci Alvin et Léo pour l&rsquo;invitation.</p>
+<h3 id="programme">Programme</h3>
+<p>Voici le programme de la soirée :</p>
+<ul>
+<li><strong>19h00-19h15 :</strong> Accueil des participants</li>
+<li><strong>19h15-19h25 :</strong> Présentation du programme</li>
+<li><strong>19h25-19h45 :</strong> Debugging with network - Anthonin Bonnefoy</li>
+<li><strong>19h45-20h00 :</strong> SRECon19 recap and highlights - Pablo Seminario</li>
+<li><strong>20h00-20h15 :</strong> Quizz SRE</li>
+<li><strong>20h15-21h30 :</strong> Apéro sponsorisé par Datadog</li>
+</ul>
+<p>Si quelqu&rsquo;un est motivé pour un lightning talk (~5/10 minutes) il y a toujours des créneaux disponibles, donc n&rsquo;hésitez pas à proposer le votre, les talks sont ouverts à tout type de niveaux et de thématiques SRE: principes, on-call, monitoring, best practices, incident management, post-mortem, outils, retours d&rsquo;expérience, etc.</p>
+<p>A mardi !</p>
+<h3 id="détail-des-présentations">Détail des présentations</h3>
+<h4 id="debugging-with-network">Debugging with network</h4>
+<p><strong>Speaker:</strong> Anthonin Bonnefoy, SRE @ Datadog</p>
+<p><strong>Description:</strong> During incidents, you might be brought to debug applications and systems you have no knowledge about. The network can provide invaluable information and insight into those. I will share my experience with the tools and methods I&rsquo;ve used to find and solve issues inside our AWS infrastructure.</p>
+<h4 id="srecon19-recap-and-highlights">SRECon19 recap and highlights</h4>
+<p><strong>Speaker:</strong> Pablo Seminario, SRE @ PeopleDoc</p>
+<p><strong>Description:</strong> An introduction to the SRECon event and a recap of its latest edition in Dublin, including a highlight of my preferred talks.</p>
+<h3 id="links">Links</h3>
+<ul>
+<li>Détails de l&rsquo;event sur <a href="https://www.meetup.com/Site-Reliability-Engineering-Paris/events/265371024/">Meetup.com</a></li>
+<li><a href="https://www.meetup.com/Site-Reliability-Engineering-Paris/photos/30443587/">Photos</a></li>
+</ul>
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://sre-france.github.io//tags/meetup/">meetup</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/2021-10-07-rex-edition/">#11 Site Reliability Engineering - REX edition</a></li>
+                
+                    <li><a href="/post/2021-07-26-summer-meetup/">#10 Site Reliability Engineering - Summer meetup 🌞😎🏖️</a></li>
+                
+                    <li><a href="/post/2021-04-08-monitoring-tools/">#9 Site Reliability Engineering - Monitoring tools 📈</a></li>
+                
+                    <li><a href="/post/2021-01-19-1st-meetup-2021/">#8 Site Reliability Engineering - 1st meetup of 2021 🎉</a></li>
+                
+                    <li><a href="/post/2020-09-30-news-and-infrastructure-as-code/">#7 Site Reliability Engineering - News and Infrastructure as code</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://sre-france.github.io/post/2019-09-18-meetup-de-la-rentree/" data-toggle="tooltip" data-placement="top" title="#4 Site Reliability Engineering - Meetup de la rentrée">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://sre-france.github.io/post/2020-02-05-1st-meet-in-2020/" data-toggle="tooltip" data-placement="top" title="#6 Site Reliability Engineering - 1st meet in 2020">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="https://github.com/sre-france" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://telegram.me/joinchat/UtlUno6ukr0r6v6I" title="Telegram">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-telegram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          
+            <a href="https://sre-france.github.io/">SRE France</a>
+          
+
+          &nbsp;&copy;
+          
+            2021
+          
+
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.71.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://sre-france.github.io/js/main.js"></script>
+<script src="https://sre-france.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://sre-france.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
