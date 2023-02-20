@@ -7,7 +7,8 @@
 &lt;li>un retour d&amp;rsquo;expérience de &lt;strong>Hassen Harzallah&lt;/strong> sur le build des images Docker multi-architecture&lt;/li>
 &lt;li>&lt;strong>Benoît Goujon&lt;/strong> sur comment utiliser des pratiques SRE dans un incident Data&lt;/li>
 &lt;li>et pour finir, &lt;strong>Benjamin Sanvoisin&lt;/strong> sur l&amp;rsquo;approche WYSIWYG pour contribuer plus rapidement dans d&amp;rsquo;importantes code base Terraform&lt;/li>
-&lt;/ul></description></item><item><title>#15 Site Reliability Engineering - Live from Nantes</title><link>https://sre-france.github.io/post/2022-11-23-live-from-nantes/</link><pubDate>Wed, 23 Nov 2022 19:00:00 +0200</pubDate><guid>https://sre-france.github.io/post/2022-11-23-live-from-nantes/</guid><description>&lt;p>Après Bordeaux et Lyon, c&amp;rsquo;était le tour de Nantes! En mode hybride, le meetup a
+&lt;/ul>
+&lt;p>Ce meetup était aussi l&amp;rsquo;occasion de tirer au sort deux personnes pour leur faire gagner une place pour le &lt;a href="https://www.kcdfrance.fr/">KCD France&lt;/a>. Encore merci à CNCF Paris ! Photo: &lt;a href="https://twitter.com/SREFrance/status/1625921867067293701">https://twitter.com/SREFrance/status/1625921867067293701&lt;/a>&lt;/p></description></item><item><title>#15 Site Reliability Engineering - Live from Nantes</title><link>https://sre-france.github.io/post/2022-11-23-live-from-nantes/</link><pubDate>Wed, 23 Nov 2022 19:00:00 +0200</pubDate><guid>https://sre-france.github.io/post/2022-11-23-live-from-nantes/</guid><description>&lt;p>Après Bordeaux et Lyon, c&amp;rsquo;était le tour de Nantes! En mode hybride, le meetup a
 eu lieu dans les locaux de &lt;a href="https://www.wescale.fr/">WeScale&lt;/a> avec une vingtaine de personnes
 sur place et une autre vingtaine en ligne.&lt;/p>
 &lt;p>La soirée a commencé avec quelques news du groupe, le &lt;a href="https://sre-france.github.io/post/2022-09-05-summercamp-2022/">récap du SRE
