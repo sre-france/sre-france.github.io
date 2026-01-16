@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on SRE France</title><link>https://sre-france.github.io/page/</link><description>Recent content in Pages on SRE France</description><generator>Hugo</generator><language>en-us</language><managingEditor>srefranceasso@gmail.com (SRE France Association)</managingEditor><webMaster>srefranceasso@gmail.com (SRE France Association)</webMaster><lastBuildDate>Tue, 13 Jan 2026 17:30:00 +0100</lastBuildDate><atom:link href="https://sre-france.github.io/page/index.xml" rel="self" type="application/rss+xml"/><item><title>Job Board</title><link>https://sre-france.github.io/page/job-board/</link><pubDate>Tue, 13 Jan 2026 17:30:00 +0100</pubDate><author>srefranceasso@gmail.com (SRE France Association)</author><guid>https://sre-france.github.io/page/job-board/</guid><description>&lt;p&gt;This space is opened to everyone who wants to share job opportunites that could
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on SRE France</title><link>https://srefrance.org/page/</link><description>Recent content in Pages on SRE France</description><generator>Hugo</generator><language>en-us</language><managingEditor>srefranceasso@gmail.com (SRE France Association)</managingEditor><webMaster>srefranceasso@gmail.com (SRE France Association)</webMaster><lastBuildDate>Tue, 13 Jan 2026 17:30:00 +0100</lastBuildDate><atom:link href="https://srefrance.org/page/index.xml" rel="self" type="application/rss+xml"/><item><title>Job Board</title><link>https://srefrance.org/page/job-board/</link><pubDate>Tue, 13 Jan 2026 17:30:00 +0100</pubDate><author>srefranceasso@gmail.com (SRE France Association)</author><guid>https://srefrance.org/page/job-board/</guid><description>&lt;p&gt;This space is opened to everyone who wants to share job opportunites that could
 be useful for SREs looking for new challenges.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s a curated list of sites where you can find new jobs opportunities.&lt;/p&gt;
 &lt;h2 id="boards"&gt;Boards&lt;/h2&gt;
@@ -28,7 +28,7 @@ be useful for SREs looking for new challenges.&lt;/p&gt;
 &lt;a href="https://careers.criteo.com/en/jobs/?keyword=sre#results"&gt;criteo.com/careers&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Polyconseil&lt;/strong&gt;
 &lt;a href="https://www.welcometothejungle.com/fr/companies/polyconseil/jobs"&gt;welcometothejungle.co/fr/companies/polyconseil/jobs&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>About</title><link>https://sre-france.github.io/page/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>srefranceasso@gmail.com (SRE France Association)</author><guid>https://sre-france.github.io/page/about/</guid><description>&lt;p&gt;Ceci est un site pour des personnes intéressées par la thématique &lt;a href="https://en.wikipedia.org/wiki/Site_reliability_engineering"&gt;Site
+&lt;/ul&gt;</description></item><item><title>About</title><link>https://srefrance.org/page/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>srefranceasso@gmail.com (SRE France Association)</author><guid>https://srefrance.org/page/about/</guid><description>&lt;p&gt;Ceci est un site pour des personnes intéressées par la thématique &lt;a href="https://en.wikipedia.org/wiki/Site_reliability_engineering"&gt;Site
 Reliability
 Engineering&lt;/a&gt; (SRE)
 partout en France.&lt;/p&gt;
@@ -39,7 +39,7 @@ anecdotes de ce sujet en pleine essor, sur le marché tech et digital.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;SRE France&lt;/strong&gt; est aussi une &lt;strong&gt;association à but non lucratif loi du 1er
 juillet 1901&lt;/strong&gt;, ayant comme objectifs l&amp;rsquo;organisation et le soutien des activités
 et des événements autours la thématique DevOps et particulièrement SRE en
-France.&lt;/p&gt;</description></item><item><title>Contact</title><link>https://sre-france.github.io/page/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>srefranceasso@gmail.com (SRE France Association)</author><guid>https://sre-france.github.io/page/contact/</guid><description>&lt;p&gt;Pour suivre les actualités et/ou interagir avec la communauté :&lt;/p&gt;
+France.&lt;/p&gt;</description></item><item><title>Contact</title><link>https://srefrance.org/page/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>srefranceasso@gmail.com (SRE France Association)</author><guid>https://srefrance.org/page/contact/</guid><description>&lt;p&gt;Pour suivre les actualités et/ou interagir avec la communauté :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Telegram&lt;/strong&gt;
 &lt;ul&gt;
